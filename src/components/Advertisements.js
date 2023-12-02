@@ -2,51 +2,20 @@ import React from "react";
 import CardList from "./CardList";
 import Card from "./Card";
 
-const advertisementsData = [
-    {
-        title: "Ad1",
-        description:"This is the first advertisement.",
-        contact:"contact1Lexicon@.se",
-        image:"https://via.localholder.com/150",
+const advertisement =  (props) => {
+   return(
+    <div class ="card mb-4 col-md-4">
+        <img class="card-img-top" src={props.advertisement.image} />
+        <div class =" card-body">
+            <h5 class="card-title">{props.advertisement.title} </h5>
+            <p class="card-text">{props.advertisement.description} </p>
+            <p class=" card-text"> Contact:{props.advertisement.contact}  </p>
 
-
-    },
-
-     {
-    title: "Ad 2",
-    description: "This is the second advertisement.",
-    contact: "contact2Lexicon@.se",
-    image:"https://via.localholder.com/150",
-
-
-},
-     {
-    title: "Ad 3",
-    description : "This is third advertisement.",
-    contact: "contact3Lexico@.se",
-    image:"https://via.localholder.com/150",
-},
-    {
-        title: "Ad 4",
-        description : "This is fourth advertisement.",
-        contact: "contact4Lexicon@.se",
-        image:"https://via.localholder.com/150",
-
-    },
-    {
-        title: "Ad 5",
-        description: "This is fifth advertisement.",
-        contact: "contact5Lexicon@.se",
-        image: "https://via.localholder.com/150",
-    },
-    {
-        title:"Ad 6",
-        description: "This is sixth advertisement.",
-        contact:"contact6Lexicon@.se",
-        image:"https://via.localholder.com/150",
-    }
-        
-
-        
-    
-]
+        </div>
+         <div class="card-footer text-center">
+            <button class=" btn btn-info btn-block">Details</button>
+         </div>
+    </div>
+   )
+}
+       export default advertisement;             
